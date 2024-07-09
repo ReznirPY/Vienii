@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vienii">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
+    <meta name="title" content="reznir.tech">
+    <meta name="description" content="hi im reznir">
+    <meta name="keywords" content="idk">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta property="og:image" content="src/pfp.png">
+    <meta name="theme-color" content="#78a2a5">
+    <link rel="shortcut icon" href="src/pfp.png" type="image/x-icon">
+    
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+        :root {
+            --global-font-size: 18px;
+            --global-line-height: 1.4em;
+            --global-space: 10px;
+            --font-stack: "Inconsolata", Courier New, monospace,
+            serif;
+            --mono-font-stack: "Inconsolata", Courier New, monospace,
+            serif;
+            --background-color: #222225;
+            --page-width: 60em;
+            --font-color: #e8e9ed;
+            --invert-font-color: #222225;
+            --secondary-color: #a3abba;
+            --tertiary-color: #a3abba;
+            --primary-color: #2596be;
+            --error-color: #ff3c74;
+            --progress-bar-background: #3f3f44;
+            --progress-bar-fill: rgb(37, 150, 190);
+            --code-bg-color: #3f3f44;
+            --input-style: solid;
+            --display-h1-decoration: none;
+        }
+    </style>
+    <title>Reznir</title>
+</head>
+<body>
+    <div class="container">
+        <div class="terminal-nav">
+          <div class="terminal-logo">
+            <div class="logo terminal-prompt"><a href="#" class="no-style">Reznir</a></div>
+          </div>
+          <nav class="terminal-menu">
+            <ul>
+              <li><a class="menu-item" href="https://github.com/rezznir">Github</a></li>
+              <li><a class="menu-item" href="https://discord.com/users/1218756435664441404">Discord</a></li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+    <div class="container">
+      <h1>Hi! Im Reznir</h1>
+      <p>Im a developer from <span class="obfuscated">ASJHASJHJKAS</span>. I love to code and learn new things. I am currently learning Discord Bot develoment.</p>
+      <a href="https://github.com/rezznir">Github</a>
+      <a href="https://discord.com/users/1218756435664441404">Discord</a>
+      <a href="https://matrix.to/#/@reznir:matrix.org">Matrix</a>
+      <a href="mailto:hi@reznir.tech">Email</a>
+    </div>
+  <script>
+    // obfuscated effect
+    const obfuscated = document.querySelector('.obfuscated');
+    const obfuscatedText = obfuscated.textContent;
+    // random
+    const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+    // obfuscate
+    const obfuscate = () => {
+      const obfuscatedChars = obfuscatedText.split('').map(char => {
+        if (char === ' ') return ' ';
+        return String.fromCharCode(random(65, 90));
+      });
+      obfuscated.textContent = obfuscatedChars.join('');
+    };
+    // obfuscate every 100ms
+    setInterval(obfuscate, 100);
+  </script>
+</body>
+</html>
